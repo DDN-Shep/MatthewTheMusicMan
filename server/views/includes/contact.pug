@@ -1,0 +1,14 @@
+section.contact
+  .container
+    form(action='https://formspree.io/andyclass50@hotmail.com', method='post')
+      input#contact-subject.u-full-width.hide(type='hidden', name='_subject', value='MatthewTheMusicMan: Contact Message')
+      .row
+        .six.columns
+          label(for='contact-name') Your name
+          input#contact-name.u-full-width(type='text', name='name', placeholder='John Doe', required)
+        .six.columns
+          label(for='contact-email') Your email
+          input#contact-email.u-full-width(type='email', name='_replyto', placeholder='john.doe@mailbox.com', required)
+      label(for='contact-message') Your message
+      textarea#contact-message.u-full-width(placeholder='Hi Matt, I was wondering…')
+      input.button-primary(type='submit', value='Send')

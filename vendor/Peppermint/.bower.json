@@ -1,0 +1,42 @@
+{
+  "name": "Peppermint",
+  "version": "1.4.0",
+  "homepage": "http://wd.dizaina.net/en/scripts/peppermint/",
+  "authors": [
+    "Oleg Korsunsky <wd@dizaina.net>"
+  ],
+  "description": "Responsive touch-enabled slider. Tiny, supports mouse and all sorts of touch, library agnostic.",
+  "main": [
+    "dist/peppermint.min.js",
+    "dist/peppermint.suggested.css"
+  ],
+  "keywords": [
+    "touch",
+    "touch-events",
+    "pointer-events",
+    "mouse-events",
+    "slider",
+    "carousel",
+    "gallery",
+    "vanilla-js",
+    "framework-agnostic",
+    "library-agnostic"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "_release": "1.4.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.4.0",
+    "commit": "116fbed88dff9b72cf17e73d3af41120c54c5645"
+  },
+  "_source": "https://github.com/wilddeer/Peppermint.git",
+  "_target": "^1.4.0",
+  "_originalSource": "Peppermint",
+  "_direct": true
+}

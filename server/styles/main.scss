@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css');
+
+$primary-color: #f9f2dd;
+$secondary-color: #7dbdff;
+$tertiary-color: #000000;
+
+html, body {
+  font: {
+    family: Raleway, helvetica, arial, sans-serif;
+    size: 1em;
+  };
+  height: 100%;
+}
+
+body {
+  position: relative;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  border: 0;
+  outline: none;
+  text-decoration: none;
+}
+
+.no-select {
+  user-select: none;
+}
+
+.hide {
+  display: none;
+}
+
+header, main, footer {
+  position: absolute;
+  width: 100%;
+}
+
+header {
+  top: 2em;
+}
+
+main {
+  height: 100%;
+  padding: 5em;
+}
+
+footer {
+  bottom: 2em;
+}
+
+nav {
+  &.navbar {
+    ul.nav {
+      &, & > li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      & > li {
+        display: inline-block;
+        white-space: nowrap;
+
+        > a {
+          display: inline-block;
+          padding: .5em 2em;
+        }
+      }
+    }
+  }
+}
+
+.social {
+  text-align: center;
+
+  > a {
+    display: inline-block;
+    padding: 1em;
+    margin: 0 1em;
+    text-align: center;
+  }
+}
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}

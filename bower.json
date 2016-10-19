@@ -1,0 +1,30 @@
+{
+  "name": "matthew-the-music-man",
+  "description": "Public facing web site to act as a profile/portfolio for Matt, a guitar tutor",
+  "main": "server.js",
+  "authors": [
+    "Andrew Sheppard <andrewsheppard@atgmedia.com>"
+  ],
+  "license": "UNLICENSED",
+  "keywords": [
+    "guitar",
+    "tutor"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Peppermint": "^1.4.0",
+    "skeleton": "^2.0.4",
+    "font-awesome": "^4.6.3",
+    "gsap": "^1.19.0",
+    "system.js": "^0.19.39",
+    "jquery": "^3.1.1"
+  }
+}

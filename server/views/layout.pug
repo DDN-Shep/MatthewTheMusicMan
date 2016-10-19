@@ -1,0 +1,61 @@
+﻿doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui')
+    meta(name='author', content='the-saleroom.com')
+    meta(name='description', content='Bid online for collectables and antiques at the Web&#32s No.1 online auction site. Over 100,000 live lots each day!')
+    meta(name='keyword', content='antiques, auction, online auctions, auction house, collectables, auctioneers, live auctions, buy to auction, bidding site, auction software')
+
+    title the-saleroom
+
+    link(rel='icon', href='/favicon.ico')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css', crossorigin='anonymous')
+    link(rel='stylesheet', href='/css/main.min.css')
+
+    include ./includes/compatibility.pug
+  body
+    header
+      include ./includes/navbar.pug
+
+    main
+      include ./includes/contact.pug
+
+    footer
+      include ./includes/social.pug
+
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.slim.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/tweenmax.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.36/system-polyfills.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.36/system.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/page.js/1.7.1/page.min.js')
+    script.
+      (function() {
+          'use strict';
+
+          function SystemCacheBuster() {
+              var systemLocate = System.locate;
+              System.locate = function(load) {
+                  var System = this;
+                  return Promise.resolve(systemLocate.call(this, load)).then(function(address) {
+                      if (address.lastIndexOf('html.js') > -1) return address;
+                      if (address.lastIndexOf('css.js') > -1) return address;
+                      return address + System.cacheBust;
+                  });
+              };
+              System.cacheBust = '?bust=' + Date.now();
+          }
+
+          //* FOR DEVELOPMENT ONLY!
+          SystemCacheBuster(); // Cache busting for SystemJS
+          //*/
+
+          System.config({
+              baseURL: '/js'
+          });
+
+          System.import('main.min.js');
+      })();
+
+    include ./includes/google-analytics.pug
